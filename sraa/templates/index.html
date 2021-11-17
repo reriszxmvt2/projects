@@ -1,0 +1,93 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>SRAA</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %} ">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-sm navbar-light bg-light ">
+    <a class="navbar-brand" href="#">System Requirements Ambiguity Analysis (SRAA)</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+
+  <!-- Navigation-->
+  <!-- <nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+      <a class="navbar-brand" href="">System Requirements Ambiguity Analysis (SRAA)</a>
+    </div>
+  </nav> -->
+
+  <header class="masthead">
+    <div class="container position-relative">
+      <div class="row justify-content-center">
+        <div class="col-xl-6">
+          <div class="text-center text-white col-12">
+            <!-- Page heading-->
+            <h1 class="mb-5">System Requirements Ambiguity Analysis (SRAA)</h1>
+            <form action="detect" enctype="multipart/form-data" method="get">
+              <div style="margin:0.5rem 0">
+                <label for="">Name Projects</label>
+                <input type="text" class="form-control" required name="name" placeholder="Name Project">
+              </div>
+
+              <div class="row justify-content-center" style="margin:0.5rem 0">
+                <label for="">text</label>
+                <textarea type="textarea" class="form-control" required name="text" placeholder="TEXT" style="height: 50px; width: 1000px;"></textarea>
+              </div>
+              
+
+              <!-- <input type="file" id="files" name="file"  /> Read bytes:
+              <span class="readBytesButtons"> -->
+                <button type="submit" class="btn btn-primary">Detected</button>
+              <!-- </span> -->
+              <!-- <div id="byte_range"></div> -->
+              <!-- <div id="byte_content"></div> -->
+              <!-- <div class="input-group mb-3">
+                                    <div class="custom-file" action="detect">
+                                      <input type="file" class="form-control" id="" name="file" placeholder="file">
+                                      
+                                    </div>
+                                  </div>
+                                <div>
+                                    <button type="submit" class="btn btn-primary">Detected</button>
+                                </div> -->
+            </form>
+
+            <!-- <form action="detect">
+                              <input type="file" id="myFile" name="browse">
+                              <input type="submit">
+                            </form>  -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+ 
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
