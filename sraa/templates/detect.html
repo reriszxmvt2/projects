@@ -39,10 +39,13 @@
                 <div class="card bg-light mb-3">
 
                   <div class="card-header">{{name}}</div>
-                  <div class="card-body">
+                  <div class="card-body" style="text-align:left">
                     {% for text in req %}
-                      <a id="{{ text.1 }}">{{ text.0 }}</a>
+
+                    <a id="{{ text.1 }}">{{ text.0|linebreaksbr }}</a>
+
                     {% endfor %}
+                    
                   </div>
 
                 </div>

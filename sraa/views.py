@@ -31,6 +31,8 @@ def detect(request):
     for word in test:
         if word[0] == '\r\n':
             0
+        elif word[0] == '\r\n':
+            print("phet")
         elif word[1] == 'PRON' :
             Referential = Referential+1
         elif word[1] == 'PPRS' :
