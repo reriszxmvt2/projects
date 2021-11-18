@@ -3,7 +3,6 @@ from typing import Match
 from django.shortcuts import render
 from pythainlp import word_tokenize
 from pythainlp import pos_tag
-# from pythainlp import  sent_tokenize
 
 # Create your views here.
 
@@ -22,17 +21,15 @@ def detect(request):
     Vague = 0
 
     test = pos_tag(word_tokenize(text,keep_whitespace=False))
-    # test1 = sent_tokenize((text),engine="whitespace+newline")
     print(pos_tag(word_tokenize(text,keep_whitespace=False)))
     print(len(test))
 
     count = len(pos_tag(word_tokenize(text,keep_whitespace=False)))
+
     print(count)
     for word in test:
         if word[0] == '\r\n':
-            0
-        elif word[0] == '\r\n':
-            print("phet")
+            count=count-1
         elif word[1] == 'PRON' :
             Referential = Referential+1
         elif word[1] == 'PPRS' :

@@ -20,8 +20,8 @@
 
   <nav class="navbar navbar-expand-sm navbar-light bg-light ">
     <a class="navbar-brand" href="#">System Requirements Ambiguity Analysis (SRAA)</a>
-    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-        aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   </nav>
@@ -33,57 +33,64 @@
     </div>
   </nav> -->
 
-  <header class="masthead">
+  <header class="masthead" style="width: auto; height: 950px">
     <div class="container position-relative">
       <div class="row justify-content-center">
-        <div class="col-xl-6">
-          <div class="text-center text-white col-12">
+        <div class="col-xl">
+          <div class="text-center text-white col">
             <!-- Page heading-->
-            <h1 class="mb-5">System Requirements Ambiguity Analysis (SRAA)</h1>
+            <h1 class="container">System Requirements Ambiguity Analysis (SRAA)</h1>
             <form action="detect" enctype="multipart/form-data" method="get">
               <div style="margin:0.5rem 0">
-                <label for="">Name Projects</label>
-                <input type="text" class="form-control" required name="name" placeholder="Name Project">
+                <label for="">Projects Name:</label>
+                <input type="text" class="container form-control" required name="name" placeholder="Name Project"
+                  style="height: 50px; width: 500px;">
+              </div>
+              <br>
+              <div class="justify-content-center" style="margin:0.5rem 0">
+                <label for="">Requirements:</label>
+                <textarea type="textarea" class="container form-control" required name="text" placeholder="TEXT"
+                  style="height: 250px; width: 900px;"></textarea>
               </div>
 
-              <div class="row justify-content-center" style="margin:0.5rem 0">
-                <label for="">text</label>
-                <textarea type="textarea" class="form-control" required name="text" placeholder="TEXT" style="height: 250px; width: 1000px;"></textarea>
-              </div>
-              
-
-              <!-- <input type="file" id="files" name="file"  /> Read bytes:
-              <span class="readBytesButtons"> -->
-                <button type="submit" class="btn btn-primary">Detected</button>
-              <!-- </span> -->
-              <!-- <div id="byte_range"></div> -->
-              <!-- <div id="byte_content"></div> -->
-              <!-- <div class="input-group mb-3">
-                                    <div class="custom-file" action="detect">
-                                      <input type="file" class="form-control" id="" name="file" placeholder="file">
-                                      
-                                    </div>
-                                  </div>
-                                <div>
-                                    <button type="submit" class="btn btn-primary">Detected</button>
-                                </div> -->
+              <button type="submit" class="btn btn-primary">Detected</button>
             </form>
-
-            <!-- <form action="detect">
-                              <input type="file" id="myFile" name="browse">
-                              <input type="submit">
-                            </form>  -->
-
           </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="container card-columns">
+      <div class="container card" style="width: 21rem;height: 22rem;">
+        <div class="container col"><img class="container" src="{% static 'img/37268301-question-mark-question-words-vector-concept.jpg' %}" style="width: 15rem;height: 10rem;"></div>
+        <div class="card-body">
+          <h5 class="card-title" style="text-align:center">FAQs</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="container card" style="width: 21rem;height: 22rem;">
+        <div class="container col"><img class="container" src="{% static 'img/37268301-question-mark-question-words-vector-concept.jpg' %}" style="width: 15rem;height: 10rem;"></div>
+        <div class="card-body" style="text-align:center">
+          <h5 class="card-title">Knowledge Base</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="container card" style="width: 21rem;height: 22rem;">
+        <div class="container col"><img class="container" src="{% static 'img/37268301-question-mark-question-words-vector-concept.jpg' %}"  style="width: 15rem;height: 10rem;"></div>
+        <div class=" card-body" style="text-align:center">
+          <h5 class="card-title">Support Forum</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>
       </div>
     </div>
   </header>
 
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
- 
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
