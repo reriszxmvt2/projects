@@ -12,7 +12,7 @@ def index(request):
 
 def detect(request):
 
-    name = request.GET['name']
+    # name = request.GET['name']
     text = request.GET['text']
 
     Referential = 0
@@ -105,6 +105,6 @@ def detect(request):
     print("Referential : ", pReferential)
     presult = round(pVague+pCoordination+pScope+pReferential,2)
 
-    args = {'name': name, 'req': test, 'vague': Vague, 'coordination': Coordination, 'scope': Scope, 'referential': Referential, 'pvague': pVague,
+    args = {'req': test, 'vague': Vague, 'coordination': Coordination, 'scope': Scope, 'referential': Referential, 'pvague': pVague,
             'pcoordination': pCoordination, 'pscope': pScope, 'preferential': pReferential, 'count': count, 'result': result, 'presult': presult}
     return render(request, 'detect.html', args)

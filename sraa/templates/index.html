@@ -18,42 +18,30 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-sm navbar-light bg-light ">
-    <a class="navbar-brand" href="#">System Requirements Ambiguity Analysis (SRAA)</a>
-    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+  <nav class="navbar navbar-light nav_bar">
+    <a class="navbar-brand" href="">
+      <img src="static\img\detect_icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      System Requirements Ambiguity Analysis (SRAA)
+    </a>
   </nav>
 
-  <!-- Navigation-->
-  <!-- <nav class="navbar navbar-light bg-light static-top">
+  <header>
     <div class="container">
-      <a class="navbar-brand" href="">System Requirements Ambiguity Analysis (SRAA)</a>
-    </div>
-  </nav> -->
-
-  <header class="masthead" style="width: auto; height: 950px">
-    <div class="container position-relative">
       <div class="row justify-content-center">
         <div class="col-xl">
           <div class="text-center text-white col">
-            <!-- Page heading-->
-            <h1 class="container">System Requirements Ambiguity Analysis (SRAA)</h1>
+
+            <h1 class="head_index">System Requirements Ambiguity Analysis (SRAA)</h1>
             <form action="detect" enctype="multipart/form-data" method="get">
-              <div style="margin:0.5rem 0">
-                <label for="">Projects Name:</label>
-                <input type="text" class="container form-control" required name="name" placeholder="Name Project"
-                  style="height: 50px; width: 500px;">
-              </div>
               <br>
-              <div class="justify-content-center" style="margin:0.5rem 0">
-                <label for="">Requirements:</label>
-                <textarea type="textarea" class="container form-control" required name="text" placeholder="TEXT"
-                  style="height: 250px; width: 900px;"></textarea>
+              <div class="justify-content-center">
+                <textarea type="textarea" class="container textarea_" required name="text"
+                  placeholder="maximum 1500 word"></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary">Detected</button>
+              <button type="submit" class="detect_bt">Detected</button>
             </form>
           </div>
         </div>
@@ -61,30 +49,68 @@
     </div>
     <br>
     <br>
-    <div class="container card-columns">
-      <div class="container card" style="width: 21rem;height: 22rem;">
-        <div class="container col"><img class="container" src="{% static 'img/37268301-question-mark-question-words-vector-concept.jpg' %}" style="width: 15rem;height: 10rem;"></div>
-        <div class="card-body">
-          <h5 class="card-title" style="text-align:center">FAQs</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </header>
+
+  <!-- <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <div class="container description">
+          <p>SRAA คือ อะไร</p>
+          <p>SRAA ย่อมาจาก System Requirements Ambiguity Analysis แปลเป็นภาษไทยว่า ระบบวิเคราะห์ความกำกวมของความต้องการระบบ </p>
         </div>
       </div>
-      <div class="container card" style="width: 21rem;height: 22rem;">
-        <div class="container col"><img class="container" src="{% static 'img/37268301-question-mark-question-words-vector-concept.jpg' %}" style="width: 15rem;height: 10rem;"></div>
-        <div class="card-body" style="text-align:center">
-          <h5 class="card-title">Knowledge Base</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
+      <div class="col-6">
+        <img src="static\img\amb_detect.jpg" alt="" class="container">
       </div>
-      <div class="container card" style="width: 21rem;height: 22rem;">
-        <div class="container col"><img class="container" src="{% static 'img/37268301-question-mark-question-words-vector-concept.jpg' %}"  style="width: 15rem;height: 10rem;"></div>
-        <div class=" card-body" style="text-align:center">
-          <h5 class="card-title">Support Forum</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div> -->
+
+  <section class="showcase">
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <div class="col-lg-6 order-lg-2 text-white showcase-img">
+          <img src="static\img\amb_detect2.jpg" alt="" style="width:100%">
+        </div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h2>SRAA</h2>
+          <p class="lead mb-0">SRAA ย่อมาจาก System Requirements Ambiguity Analysis แปลเป็นภาษไทยว่า
+            ระบบวิเคราะห์ความกำกวมของความต้องการระบบมีหน้าที่ตรวจจับคำกำกวมของ Requirement ที่อยู่ใน Software
+            Requirement Specification
+            (SRS) เวอร์ชั่นภาษาไทย โดยการใส่ข้อความที่เป็นตัวอักษรภาษาไทยในกล่องข้อความและกดปุ่ม Detected สีเขียว
+            ระบบจะแสดงคำที่มีความกำกวมออกมาในรูปแบบสีต่างๆตามประเภทของคำกวม</p>
         </div>
       </div>
     </div>
-  </header>
+  </section>
+
+  <section class="testimonials text-center bg-light">
+    <div class="container">
+        <h2 class="mb-5">คณะผู้จัดทำ</h2>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                    <img class="img-fluid rounded-circle mb-3" src="static\img\panya_.jpg" alt="..." />
+                    <h5>Mr. Panya Nuanchan</h5>
+                    <p class="font-weight-light mb-0">6130613006</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                    <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-2.jpg" alt="..." />
+                    <h5>Mrs. Sathani Dermchai</h5>
+                    <p class="font-weight-light mb-0">6130613016</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                    <img class="img-fluid rounded-circle mb-3" src="static\img\nattapong_.jpg" alt="..." />
+                    <h5>Mr. Nattapong Pattanakit</h5>
+                    <p class="font-weight-light mb-0">6130613018</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
   <!-- Optional JavaScript -->
@@ -94,6 +120,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src=" {% static 'script.js' %}"></script>
 
 </body>
 

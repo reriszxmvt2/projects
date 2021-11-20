@@ -17,15 +17,14 @@
 
 <body>
   <!-- Navigation-->
-  <nav class="navbar navbar-expand-sm navbar-light bg-light ">
-    <a class="navbar-brand" href="#" >System Requirements Ambiguity Analysis (SRAA)</a>
-    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <nav class="navbar navbar-light nav_bar">
+    <a class="navbar-brand" href="">
+      <img src="static\img\detect_icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      System Requirements Ambiguity Analysis (SRAA)
+    </a>
   </nav>
 
-  <header class="masthead">
+  <header class="">
     <div class="position-relative">
       <div class="row justify-content-center">
         <div class="col-xl-6">
@@ -38,7 +37,7 @@
 
                 <div class="card bg-light mb-3">
 
-                  <div class="card-header">{{name}}</div>
+                  <div class="card-header">Ambiguity Detecting</div>
                   <div class="card-body" style="text-align:left">
                     {% for text in req %}
 
@@ -60,7 +59,7 @@
                   <table class="table">
                     <thead>
                       <tr class="table-dark">
-                        <th scope="col">{{name}}</th>
+                        <th scope="col">Ambiguity Type</th>
                         <th scope="col">count</th>
                         <th scope="col">persen</th>
                       </tr>

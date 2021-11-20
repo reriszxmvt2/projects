@@ -1,3 +1,109 @@
+header{
+  background-image: url(img/background_5.jpg);
+  background-size: 100%;
+  height: 745px;
+}
+
+.nav_bar{
+  background-color: #e3f2fd;
+  /* background: -webkit-linear-gradient(right,rgba(255,0,0,0),rgb(0, 153, 255)); 
+  background: -o-linear-gradient(right,rgba(255,0,0,0),rgb(0, 153, 255)); 
+  background: -moz-linear-gradient(right,rgba(255,0,0,0),rgb(0, 153, 255));
+  background: linear-gradient(left, rgba(255,0,0,0), rgb(0, 153, 255));  */
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.head_index{
+  color: black;
+  margin-top:50px;
+  font-size: 45px;
+  font-family:sans-serif;
+  font-weight: bold;
+  background-color: #e3f2fd;
+  /* background: -webkit-linear-gradient(right,rgba(255,0,0,0),rgb(0, 153, 255));
+  background: -o-linear-gradient(right,rgba(255,0,0,0),rgb(0, 153, 255)); 
+  background: -moz-linear-gradient(right,rgba(255,0,0,0),rgb(0, 153, 255)); 
+  background: linear-gradient(left, rgba(255,0,0,0), rgb(0, 153, 255)); */
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.textarea_{
+  height: 400px;
+  width: 1000px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.detect_bt{
+  margin-top: 20px;
+  border-radius: 12px;
+  font-family:sans-serifn;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: greenyellow;
+  color: black;
+  border: 2px solid greenyellow;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  width: 250px;
+}
+
+/* .description{
+  margin-top: 100px;
+  margin-right: 500px;
+} */
+
+.showcase{
+  background-color: #e3f2fd;
+  /* background: -webkit-linear-gradient(right,rgba(255,0,0,0),rgb(0, 153, 255));
+  background: -o-linear-gradient(right,rgba(255,0,0,0),rgb(0, 153, 255)); 
+  background: -moz-linear-gradient(right,rgba(255,0,0,0),rgb(0, 153, 255)); 
+  background: linear-gradient(left, rgba(255,0,0,0), rgb(0, 153, 255)); */
+}
+.showcase .showcase-text {
+  padding: 3rem;
+}
+.showcase .showcase-img {
+  min-height: 15rem;
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  .showcase .showcase-text {
+    padding: 7rem;
+  }
+}
+
+.testimonials {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+.testimonials .testimonial-item {
+  max-width: 18rem;
+}
+.testimonials .testimonial-item img {
+  max-width: 12rem;
+  box-shadow: 0px 5px 5px 0px #adb5bd;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #2da1f5; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+
 
 #PRON{
   color:goldenrod;
@@ -119,56 +225,7 @@
   color:black;
 }
 
-h1, .h1 {
-  font-size: calc(1.375rem + 1.5vw);
-}
-@media (min-width: 1200px) {
-  h1, .h1 {
-    font-size: 2.5rem;
-  }
-}
 
-h2, .h2 {
-  font-size: calc(1.325rem + 0.9vw);
-}
-@media (min-width: 1200px) {
-  h2, .h2 {
-    font-size: 2rem;
-  }
-}
 
-h3, .h3 {
-  font-size: calc(1.3rem + 0.6vw);
-}
-@media (min-width: 1200px) {
-  h3, .h3 {
-    font-size: 1.75rem;
-  }
-}
 
-h4, .h4 {
-  font-size: calc(1.275rem + 0.3vw);
-}
-@media (min-width: 1200px) {
-  h4, .h4 {
-    font-size: 1.5rem;
-  }
-}
-
-h5, .h5 {
-  font-size: 1.25rem;
-}
-
-h6, .h6 {
-  font-size: 1rem;
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-header.masthead {
-  background-color:#f67280;
-}
 

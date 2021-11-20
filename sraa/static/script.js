@@ -1,36 +1,19 @@
+//Get the button:
+mybutton = document.getElementById("myBtn");
 
-  function readBlob(opt_startByte, opt_stopByte) {
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
 
-    var files = document.getElementById('files').files;
-    if (!files.length) {
-      alert('Please select a file!');
-      return;
-    }
-
-    var file = files[0];
-    var start = parseInt(opt_startByte) || 0;
-    var stop = parseInt(opt_stopByte) || file.size - 1;
-
-    var reader = new FileReader();
-
-    // If we use onloadend, we need to check the readyState.
-    reader.onloadend = function(evt) {
-      if (evt.target.readyState == FileReader.DONE) { // DONE == 2
-        document.getElementById('byte_content').textContent = evt.target.result;
-        document.getElementById('byte_range').textContent = 
-            ['Read bytes: ', start + 1, ' - ', stop + 1,
-             ' of ', file.size, ' byte file'].join('');
-      }
-    };
-
-    var blob = file.slice(start, stop + 1);
-    reader.readAsBinaryString(blob);
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
   }
-  
-  document.querySelector('.readBytesButtons').addEventListener('click', function(evt) {
-    if (evt.target.tagName.toLowerCase() == 'button') {
-      var startByte = evt.target.getAttribute('data-startbyte');
-      var endByte = evt.target.getAttribute('data-endbyte');
-      readBlob(startByte, endByte);
-    }
-  }, false);
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
