@@ -10,53 +10,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="{% static 'style.css' %} ">
 </head>
 
 <body>
-  <!-- Navigation-->
-  <nav class="navbar navbar-light nav_bar">
-    <a class="navbar-brand" href="">
-      <img src="static\img\detect_icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
-      System Requirements Ambiguity Analysis (SRAA)
-    </a>
-  </nav>
 
-  <header class="">
+  <div class="text-center text-dark col">
+    <h1 class="head_detect">System Requirements Ambiguity Analysis (SRAA)</h1>
+  </div>
+  <a accesskey="h" id="home" href="/" > ย้อนกลับ </a>
+
+  <div class="sum text-center">
+    <div class="col">Vague is : {{ vague }} words ( {{ pvague }} %) Coordination is : {{ coordination }} words ( {{pcoordination }} % ) Scope is : {{ scope }} words ( {{ pscope }} % ) Referential is : {{ referential }} ( {{ preferential }} % ) Word all : {{ count }} words</div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card bg-light mb-3 amb_card">
+        <div class="card-header text-center" style="font-weight:bold; ">Ambiguity Detecting</div>
+          <div class="card-body">
+          {% for text in req %}
+
+          <a id="{{ text.1 }}">{{ text.0|linebreaksbr }}</a>
+
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="col">
+        <table class="table sum_table">
+          <thead>
+            <tr class="table-dark">
+              <th scope="col">Ambiguity Type</th>
+              <th scope="col">count</th>
+              <th scope="col">persen</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-danger">
+              <th scope="row">Vague</th>
+              <td> {{ vague }} </td>
+              <td>{{ pvague }} %</td>
+            </tr>
+            <tr class="table-info">
+              <th scope="row">Coordination</th>
+              <td>{{ coordination }}</td>
+              <td>{{ pcoordination }} % </td>
+            </tr>
+            <tr class="table-success">
+              <th scope="row">Scope</th>
+              <td>{{ scope }}</td>
+              <td>{{ pscope }} %</td>
+            </tr>
+            <tr class="table-warning">
+              <th scope="row">Referential</th>
+              <td>{{ referential }}</td>
+              <td>{{ preferential }} % </td>
+            </tr>
+            <tr class="table-secondary">
+              <th scope="row">สรุป</th>
+              <td>{{ result }}</td>
+              <td>{{ presult }} %</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+   
+  
+
+  <!-- <header2 class="">
     <div class="position-relative">
       <div class="row justify-content-center">
-        <div class="col-xl-6">
+        <div class="row">
+          <div class="text-center text-white">
+            <h1 class="head_index">System Requirements Ambiguity Analysis (SRAA)</h1>
+            <div class="container sum" style="display:flex;">
+              <div>Vague is : {{ vague }} words ( {{ pvague }} %) Coordination is : {{ coordination }} words ( {{pcoordination }} % ) Scope is : {{ scope }} words ( {{ pscope }} % ) Referential is : {{ referential }} ( {{ preferential }} % ) Word all : {{ count }} words</div>
+            </div>
 
-          <div class="text-center text-white col-12">
-            <!-- Page heading-->
-            <h1 class="mb-5" >System Requirements Ambiguity Analysis (SRAA)</h1>
-            <div id="txt">
-              <div class="col">
-
-                <div class="card bg-light mb-3">
-
+            <div class="row" id="txt">
+              <div class="col-2">
+                <div class="card bg-light mb-3 amb_card col">
                   <div class="card-header">Ambiguity Detecting</div>
-                  <div class="card-body" style="text-align:left">
+                    <div class="card-body" style="text-align:left">
                     {% for text in req %}
 
                     <a id="{{ text.1 }}">{{ text.0|linebreaksbr }}</a>
 
                     {% endfor %}
-                    
                   </div>
+                </div>
 
-                </div>
-                <div class="row">
-                  <div>Vague is : {{ vague }} words ( {{ pvague }} %)</div>
-                  <div>Coordination is : {{ coordination }} words ( {{ pcoordination }} % )</div>
-                  <div>Scope is : {{ scope }} words ( {{ pscope }} % )</div>
-                  <div>Referential is : {{ referential }} words ( {{ preferential }} % )</div>
-                  <div>Word all : {{ count }} words</div>
-                </div>
-                <div class="row">
-                  <table class="table">
+
+                <div class="col">
+                  <table class="table sum_table">
                     <thead>
                       <tr class="table-dark">
                         <th scope="col">Ambiguity Type</th>
@@ -99,7 +152,7 @@
         </div>
       </div>
     </div>
-  </header>
+  </header2> -->
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -109,6 +162,8 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src=" {% static 'script.js' %}"></script>
+
 </body>
 
 </html>

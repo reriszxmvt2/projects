@@ -11,9 +11,13 @@ function scrollFunction() {
     mybutton.style.display = "none";
   }
 }
-
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-  document.body.scrollTop = 0; // For Safari
+  document.body.scrollTop = 0 ; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+function gohome(){
+  if (window.location.pathname=="sraa\templates\detect.html")
+    document.getElementById('home').style.display = 'button';
+ }
