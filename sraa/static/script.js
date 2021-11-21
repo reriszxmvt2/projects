@@ -19,5 +19,5 @@ function topFunction() {
 
 function gohome(){
   if (window.location.pathname=="sraa\templates\detect.html")
-    document.getElementById('home').style.display = 'button';
+    document.getElementById('home').style.display = 'none';
  }
